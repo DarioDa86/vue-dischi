@@ -1,6 +1,16 @@
 <template>
-    <section class="albums">
+    <section class="albums container">
         <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        
     </section>
 </template>
 
@@ -17,5 +27,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
 
 </style>

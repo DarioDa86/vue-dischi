@@ -13,3 +13,12 @@ body {
     font-family: $mainFont;
     background-color: $BgBody;
 }
+
+.container {
+    width: $sizeContainer;
+    margin: 0 auto;
+}
+
+.text-album {
+    color: white;
+}
