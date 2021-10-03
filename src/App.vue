@@ -15,6 +15,7 @@ export default {
   components: {
     Header,
     Albums,
+    
   }
 }
 </script>

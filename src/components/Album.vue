@@ -1,11 +1,11 @@
 <template>
     <div class="album">
         <div class="image-album">
-            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="foto casuale">
+            <img :src="info.poster" alt="info.title">
         </div>
-        <h4 class="name-album">New Jersey</h4>
-        <div class="name-author">Bon Jovi</div>
-        <div class="year-album">1988</div>
+        <h4 class="name-album">{{info.title}}</h4>
+        <div class="name-author">{{info.author}}</div>
+        <div class="year-album">{{info.year}}</div>
     </div>
     
     
@@ -13,8 +13,10 @@
 
 <script>
 export default {
-    name: "Album"
-
+    name: "Album", 
+    props: {
+        info: Object
+    },
 }
 </script>
 
