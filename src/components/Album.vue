@@ -26,6 +26,7 @@ export default {
     margin: 10px 20px;
     background-color: $BgHeader;
     text-align: center;
+    padding: 10px;
     
     .image-album {
         width: 0 auto;
@@ -41,6 +42,7 @@ export default {
         color: #fff;
         text-transform: uppercase;
         margin-bottom: 10px;
+        font-size: 20px;
     }
 
     .name-author, .year-album {
