@@ -21,7 +21,6 @@ header {
     .logo-spotify{
 
         img{
-
             height: 80px;
             margin: 10px;
         }
