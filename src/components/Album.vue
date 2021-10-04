@@ -23,13 +23,11 @@ export default {
 
 .album {
     width: calc(20% - 40px);
-    border: 1px solid #fff;
     margin: 10px 20px;
     background-color: $BgHeader;
     text-align: center;
     
     .image-album {
-        border: 1px solid #fff;
         width: 0 auto;
         padding: 10px;
         
@@ -42,6 +40,16 @@ export default {
     .name-album {
         color: #fff;
         text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .name-author, .year-album {
+
+        color: gray
+    }
+
+    .year-album {
+
         margin-bottom: 10px;
     }
 }

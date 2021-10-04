@@ -1,17 +1,6 @@
 <template>
     <section class="container" >
-        <div class="albums" v-for="(obj, index) in albums" :key="index">
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-            <Album :info="obj"/>
-        </div>
+            <Album :info="obj" v-for="(obj, index) in albums" :key="index"/>
     </section>
 </template>
 
@@ -41,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.albums {
+.container {
 
         display: flex;
         flex-wrap: wrap;
