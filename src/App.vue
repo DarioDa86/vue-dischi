@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <Albums/>
+    <Header @optionChanged="onOptionChange"/>
+    <Albums :optionSelected="optionSelected"/>
   </div>
 </template>
 
@@ -15,6 +15,17 @@ export default {
   components: {
     Header,
     Albums,
+  },
+  data() {
+    return {
+      optionSelected: ""
+    }
+  },
+  methods: {
+    // option viene automaticamente passata dall'evento (payload)
+    onOptionChange(option) {
+      this.optionSelected = option;
+    }
   }
 }
 </script>

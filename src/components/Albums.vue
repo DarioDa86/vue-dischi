@@ -1,41 +1,49 @@
 <template>
-    <section class="container" >
-            <Album :info="obj" v-for="(obj, index) in albums" :key="index"/>
+    <section class="container">
+        <Album :info="obj" v-for="(obj, index) in albumsFiltered" :key="index" />
     </section>
 </template>
 
 <script>
-import axios from 'axios';
-import Album from './Album.vue'; 
+import axios from "axios";
+import Album from "./Album.vue";
 
 export default {
     name: "Albums",
     components: {
-        Album
+    Album,
     },
+    props: ["optionSelected"],
     data() {
-        return {
-            albums: []
-        }
+    return {
+        albums: [],
+    };
     },
     created() {
-        axios
-            .get("https://flynn.boolean.careers/exercises/api/array/music")
-            .then( (res) => {
-                this.albums = res.data.response;
-            });
-    }
-}
+    axios
+        .get("https://flynn.boolean.careers/exercises/api/array/music")
+        .then((res) => {
+        this.albums = res.data.response;
+        });
+    },
+    computed: {
+    albumsFiltered() {
+        return this.albums.filter((album) => {
+            if (album.genre == this.optionSelected || this.optionSelected == "") {
+                return true;
+            }
+            return false;
+        });
+    },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .container {
-
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-
 </style>

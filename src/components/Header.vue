@@ -3,18 +3,25 @@
         <div class="logo-spotify">
             <img src="../assets/images/spotify-logo.png" alt="logo spotify">
         </div>
-        <GenreSelect/>
+        <select name="" id="" v-model="optionValue" @change="$emit('optionChanged', optionValue)">
+            <option value="">All</option>
+            <option value="Pop">Pop</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Rock">Rock</option>
+            <option value="Metal">Metal</option>
+        </select>
     </header>
 </template>
 
 <script>
-import GenreSelect from './GenreSelect.vue'; 
 
 export default {
-    components: {
-        GenreSelect
+    name: "Header",
+    data() {
+        return {
+            optionValue: ""
+        }
     }
-
 }
 </script>
 
@@ -29,9 +36,13 @@ header {
     .logo-spotify{
 
         img{
-            height: 80px;
+            height: 60px;
             margin: 10px;
         }
+    }
+
+    select {
+        margin: 30px;
     }
 }
 
