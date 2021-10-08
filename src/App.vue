@@ -33,4 +33,4 @@ export default {
 <style lang="scss">
 @import './src/assets/style/common';
 @import './src/assets/style/variables';
-</style>
+</style> 
